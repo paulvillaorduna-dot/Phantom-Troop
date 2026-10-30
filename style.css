@@ -162,3 +162,39 @@ body{
 .support-input button:hover {
   background: #ff0000;
 }
+
+#jumpscare {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 99999;
+}
+
+#jumpscare img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#error-message {
+    color: #D62828;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#login-button {
+    padding: 12px 30px;
+    background: #8B0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#login-button:hover {
+    background: #D62828;
+}
