@@ -1,0 +1,16 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+.vscode/
+*.user
+*.suo
+*.userosscache
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
