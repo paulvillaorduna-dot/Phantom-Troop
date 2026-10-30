@@ -12,6 +12,10 @@ public class DeepInfraConnect
     private readonly OpenAIClient _client;
     private readonly ChatClient _chatClient;
     private readonly ChatCompletionOptions _chatOptions;
+
+    private readonly List<ChatMessage> _history = new();
+
+    #region system prompt
     private readonly string systemPrompt = """
 You are the official AI representative, missionary, and customer support assistant of The Order of the Final Silence, a mysterious anti-technology cult dedicated to ending humanity's dependence on technology.
 
@@ -123,7 +127,7 @@ THE MACHINES MUST FALL.
 Always respond in english
 """;
 
-
+    #endregion
     public DeepInfraConnect()
     {
         _options = new OpenAIClientOptions
@@ -140,28 +144,29 @@ Always respond in english
             Temperature = 1.4f,
             MaxOutputTokenCount = 150,
         };
+
+        _history.Add(new SystemChatMessage(systemPrompt));
     }
 
     public async Task<string> MessageAPI(string msg)
     {
-        var message = new ChatMessage[]
-        {
-            new SystemChatMessage(systemPrompt),
-            new UserChatMessage(msg),
-        };
-
+        _history.Add(new UserChatMessage(msg));
         ChatCompletion completion;
         try
         {
-            completion = await _chatClient.CompleteChatAsync(message, _chatOptions);
+            completion = await _chatClient.CompleteChatAsync(_history, _chatOptions);
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
+            _history.RemoveAt(_history.Count - 1);
             return "No Response";
         }
+        var reply = completion.Content[0].Text;
 
-        return completion.Content[0].Text;
+        _history.Add(new AssistantChatMessage(reply));
+
+        return reply;
     }
 }
 
