@@ -129,10 +129,36 @@ body{
   background: #ff0000;
 }
 
-.ghost{
-    
-    width: 100px;
-    height: auto;
+.ghost,
+.ghost-lösen {
     position: fixed;
+    left: 42%;
+    transform: translateX(-50%) scale(0.7);   /* centrerad + liten från start */
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
     z-index: 9999;
+    pointer-events: none;
+    opacity: 0;                                /* dolda från början */
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.ghost {
+    top: 330px;
+}
+
+.ghost-lösen {
+    top: 385px;
+}
+
+.ghost.synlig,
+.ghost-lösen.synlig {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);      /* centrerad + full storlek */
+}
+
+.ghost img,
+.ghost-lösen img {
+    width: 50px;
+    height: auto;
 }
