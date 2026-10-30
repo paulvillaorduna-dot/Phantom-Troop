@@ -6,7 +6,7 @@ namespace Phantom_Troop.backend.Deep_Infra_API;
 
 public class DeepInfraConnect
 {
-    private readonly string _apiKey = ""; //Couldnt get loading key from json to work, so paste here. Will delete key after presentation
+    private readonly string _apiKey = "sk-di-g7zUPpNoCvWubclLur0k73fjD7xjnJnY"; //Couldnt get loading key from json to work, so paste here. Will delete key after presentation
 
     private readonly OpenAIClientOptions _options;
     private readonly OpenAIClient _client;

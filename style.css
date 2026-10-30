@@ -3,7 +3,7 @@ body{
     background-color: #000;
     font-family: Creepster;
     color: white;
-    cursor: all-scroll;
+    cursor: crosshair;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
      url("6767.png");
     background-repeat: repeat;
@@ -201,4 +201,12 @@ body{
 
 #login-button:hover {
     background: #D62828;
+}
+
+.error {
+    position: fixed;
+    width: 300px;
+    height: auto;
+    z-index: 5;              /* bakom login-boxen, ändra om du vill ha dem framför */
+    pointer-events: none;    /* klick går igenom */
 }
