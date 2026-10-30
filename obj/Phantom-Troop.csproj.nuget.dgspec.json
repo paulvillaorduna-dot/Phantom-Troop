@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj": {}
+    "C:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj": {}
   },
   "projects": {
-    "c:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj": {
+    "C:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj",
+        "projectUniqueName": "C:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj",
         "projectName": "Phantom-Troop",
-        "projectPath": "c:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj",
+        "projectPath": "C:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj",
         "packagesPath": "C:\\Users\\alexg\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\obj\\",
+        "outputPath": "C:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
