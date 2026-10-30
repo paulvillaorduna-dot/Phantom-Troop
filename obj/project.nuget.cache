@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TdzRfCl+o9w=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alexg\\Documents\\school\\hackaton\\10-30\\Phantom-Troop\\Phantom-Troop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexg\\.nuget\\packages\\openai\\2.14.0\\openai.2.14.0.nupkg.sha512",
+    "C:\\Users\\alexg\\.nuget\\packages\\system.clientmodel\\1.15.0\\system.clientmodel.1.15.0.nupkg.sha512",
+    "C:\\Users\\alexg\\.nuget\\packages\\system.memory.data\\10.0.9\\system.memory.data.10.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
