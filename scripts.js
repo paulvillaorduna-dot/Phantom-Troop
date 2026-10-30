@@ -173,3 +173,10 @@ document.addEventListener('keydown', (e) => {
         window.location.href = 'open.html';
     }
 });
+
+const tangentLjud = document.getElementById('tangent-ljud');
+
+document.addEventListener('keydown', () => {
+    const ljud = tangentLjud.cloneNode();
+    ljud.play();
+});
