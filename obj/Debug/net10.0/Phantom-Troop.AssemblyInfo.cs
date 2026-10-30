@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Phantom-Troop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+780f7c303713538a9addb306e72cb1e8cfb197df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e2740d8307e217563dbfb9a65a0dde80dbf0760")]
 [assembly: System.Reflection.AssemblyProductAttribute("Phantom-Troop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Phantom-Troop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
