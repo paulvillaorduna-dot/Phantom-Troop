@@ -3,4 +3,136 @@ body{
     background-color: #000;
     font-family: Creepster;
     color: white;
+    cursor: all-scroll;
+}
+
+.bä{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.login-box {
+  width: 350px;
+  padding: 30px;
+  background: #000;
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 20px #ff0000;
+  text-align: center;
+  margin-top: 100px;
+  position: absolute;
+  margin-left: 420px;
+}
+
+.login-box h1 {
+  margin: 0 0 20px;
+  color: #ff1a1a;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+.login-box input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #1a0000;
+  color: #39ff14;
+  border: 1px solid #8b0000;
+  font-size: 1rem;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #39ff14;
+  box-shadow: 0 0 10px #39ff14;
+}
+
+.support {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  background: #0a0000;
+  border-left: 2px solid #ff0000;
+  box-shadow: -5px 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.support-header {
+  padding: 16px;
+  color: #ff1a1a;
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid #8b0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+.support-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.msg {
+  margin: 0 0 10px;
+  padding: 10px;
+  max-width: 85%;
+  font-size: 0.9rem;
+}
+
+.msg.bot {
+  background: #1a0000;
+  color: #39ff14;
+  border: 1px solid #8b0000;
+}
+
+.msg.user {
+  margin-left: auto;
+  background: #8b0000;
+  color: #fff;
+}
+
+.support-input {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #8b0000;
+}
+
+.support-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  background: #1a0000;
+  color: #39ff14;
+  border: 1px solid #8b0000;
+}
+
+.support-input input:focus {
+  outline: none;
+  border-color: #39ff14;
+}
+
+.support-input button {
+  padding: 10px 14px;
+  background: #8b0000;
+  color: #fff;
+  border: 1px solid #ff0000;
+  cursor: crosshair;
+}
+
+.support-input button:hover {
+  background: #ff0000;
+}
+
+.ghost{
+    
+    width: 100px;
+    height: auto;
+    position: fixed;
+    z-index: 9999;
 }
