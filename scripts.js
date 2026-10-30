@@ -14,6 +14,7 @@ losen.addEventListener('blur', () => ghostLosen.classList.remove('synlig'));
 const loginForm = document.getElementById('login-form');
 const jumpscare = document.getElementById('jumpscare');
 const errorMessage = document.getElementById('error-message');
+const scareLjud = document.getElementById('scare-ljud');
 
 let attempts = 0;
 let scareActive = false;
@@ -61,10 +62,16 @@ loginForm.addEventListener('submit', (event) => {
 
     errorMessage.textContent = '';
 
+    scareLjud.currentTime = 0;
+    scareLjud.play();
+
     jumpscare.style.display = 'block';
 
     setTimeout(() => {
         jumpscare.style.display = 'none';
+
+        scareLjud.pause();
+        scareLjud.currentTime = 0;
 
         errorMessage.textContent = message;
 
