@@ -1,20 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="sv">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log in</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="scripts.js" defer></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <h1 class="bä">lowkey ba försök.....</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
 
-        <div class="login-box">
-            <h1>Logga in</h1>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 class="bä">lowkey ba försök.....</h1>
+
+    <div class="login-box">
+        <h1>Logga in</h1>
+
+        <form id="login-form">
 
             <div class="input-wrap">
                 <div class="ghost">
@@ -22,7 +29,13 @@
                     <img src="67.png" alt="Ghost 2">
                     <img src="67.png" alt="Ghost 3">
                 </div>
-                <input type="text" id="anvandarnamn" placeholder="Användarnamn">
+
+                <input
+                    type="text"
+                    id="anvandarnamn"
+                    placeholder="Användarnamn"
+                    autocomplete="off"
+                >
             </div>
 
             <div class="input-wrap">
@@ -31,21 +44,49 @@
                     <img src="67.png" alt="Ghost 2">
                     <img src="67.png" alt="Ghost 3">
                 </div>
-                <input type="password" id="losen" placeholder="Lösenord">
+
+                <input
+                    type="password"
+                    id="losen"
+                    placeholder="Lösenord"
+                >
             </div>
+
+            <button id="login-button" type="submit">
+                LOGGA IN
+            </button>
+
+        </form>
+
+        <p id="error-message" role="status"></p>
+
+    </div>
+
+    <div class="support">
+
+        <div class="support-header">
+            Support
         </div>
 
-        <div class="support">
-            <div class="support-header">Support</div>
-
-            <div class="support-messages">
-                <p class="msg bot">Hej. Jag är Support. Jag kan inte hjälpa dig.</p>
-            </div>
-
-            <div class="support-input">
-                <input type="text" placeholder="Skriv ett meddelande...">
-                <button>Skicka</button>
-            </div>
+        <div class="support-messages">
+            <p class="msg bot">
+                Hej. Jag är Support. Jag kan inte hjälpa dig.
+            </p>
         </div>
-    </body>
+
+        <div class="support-input">
+            <input
+                type="text"
+                placeholder="Skriv ett meddelande..."
+            >
+            <button type="button">Skicka</button>
+        </div>
+
+    </div>
+
+    <div id="jumpscare" aria-hidden="true">
+        <img src="Scare.webp" alt="">
+    </div>
+
+</body>
 </html>
