@@ -5,24 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Log in</title>
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <script src="scripts.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="all-ghost">
-            <div class="ghost">
-                <img id="minBild" class="ghost-1" src="67.png" alt="Beskrivning">
-                <img id="minBild" class="ghost-2" src="67.png" alt="Beskrivning">
-                <img id="minBild" class="ghost-3" src="67.png" alt="Beskrivning">
-            </div>
+        <div class="ghost">
+            <img class="ghost-1" src="67.png" alt="Beskrivning">
+            <img class="ghost-2" src="67.png" alt="Beskrivning">
+            <img class="ghost-3" src="67.png" alt="Beskrivning">
+        </div>
+        <div class="ghost-lösen">
+            <img class="ghost-1-lösen" src="67.png" alt="Beskrivning">
+            <img class="ghost-2-lösen" src="67.png" alt="Beskrivning">
+            <img class="ghost-3-lösen" src="67.png" alt="Beskrivning">
         </div>
         <h1 class="bä">lowkey ba försök.....</h1>
         <div class="login-box">
         <h1>Logga in</h1>
-            <input type="text" placeholder="Användarnamn">
-            <input type="password" placeholder="Lösenord">
+            <input type="text" id="anvandarnamn" placeholder="Användarnamn">
+            <input type="password" id="losen" placeholder="Lösenord">
         </div>
         <div class="support">
             <div class="support-header">Support</div>
