@@ -140,3 +140,36 @@ if (chatInput && chatButton && chatMessages) {
         }
     });
 }
+
+document.addEventListener('keydown', () => {
+    const bild = document.createElement('img');
+    bild.src = 'error.png';
+    bild.alt = '';
+    bild.className = 'error';
+
+    // Slumpa position, håll bilden innanför skärmen
+    const storlek = 200;
+    bild.style.left = Math.random() * (window.innerWidth - storlek) + 'px';
+    bild.style.top = Math.random() * (window.innerHeight - storlek) + 'px';
+
+    document.body.appendChild(bild);
+    
+});
+
+let tangentBuffert = '';
+
+document.addEventListener('keydown', (e) => {
+    // Bara vanliga bokstäver, hoppa över Shift, Enter, piltangenter osv.
+    if (e.key.length !== 1) return;
+
+    tangentBuffert += e.key.toLowerCase();
+
+    // Håll bufferten kort
+    if (tangentBuffert.length > 20) {
+        tangentBuffert = tangentBuffert.slice(-20);
+    }
+
+    if (tangentBuffert.endsWith('open')) {
+        window.location.href = 'open.html';
+    }
+});

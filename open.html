@@ -1,14 +1,169 @@
-<!DOCTYPE html>
-<html lang="sv">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>webb</title>
-        <link rel="stylesheet" href="open.css">
-        <script src="open.js"></script>
-    </head>
-    <body>
-        <h1>Hej världen!</h1>
-    </body>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hello World</title>
+
+    <link rel="stylesheet" href="open.css">
+    <link rel="icon" type="image/png" href="ImagesMain/Horror6Mouse.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"  rel="stylesheet">
+    <script src="open.js" defer></script>
+</head>
+
+<body>
+
+    <div class="website">
+
+        <!-- Background -->
+        <div class="background"></div>
+
+        <!-- Main Title -->
+        <header class="header">
+            <h1>Hello. wOrLd</h1>
+        </header>
+
+        <!-- Left Navigation -->
+        <nav class="navigation">
+            <a href="#" id="homeButton">HOME ◇</a>
+            <a href="#">ITEMS ON SALE ◇</a>
+            <a href="#">GALLERY ◇</a>
+            <a href="#" id="doNotOpen">DO NOT OPEN ◇</a>
+            <a href="#">SHOPPING CART ◇</a>
+
+            <div class="repeated-links" id="repeatedLinks"></div>
+        </nav>
+
+        <!-- Floating Images -->
+        <main class="artwork">
+
+            <img
+                src="ImagesMain/Horror3.jpg"
+                class="photo photo-one"
+                alt="Dark artwork 1"
+            >
+
+            <img
+                src="ImagesMain/Horror4.jpg"
+                class="photo photo-two"
+                alt="Dark artwork 2"
+            >
+
+            <img
+                src="ImagesMain/Horror5.jpeg"
+                class="photo photo-three"
+                alt="Dark artwork 3"
+            >
+
+        </main>
+
+        <!-- Contact Form -->
+        <section class="contact">
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="fullnameInput"
+                    name="name"
+                    placeholder="fullname* death man"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="message"
+                    placeholder="message* you are not alone"
+                    required
+                >
+
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="subject* you will die"
+                    required
+                >
+
+                <textarea
+                    name="description"
+                    placeholder="website tip* you will die&#10;that's it. Read the tears no one trusted.&#10;Hear, you hear&#10;Beating in your chest..."
+                ></textarea>
+
+                <button type="submit">Send</button>
+
+            </form>
+
+        </section>
+
+    </div>
+
+    <!-- Background Music -->
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="AudioMain/DarkAmbience.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="homeSound" preload="auto">
+    <source src="AudioMain/Jumpscare.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- DO NOT OPEN SCREEN -->
+
+<div id="darkScreen" class="dark-screen"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Hidden message"
+     aria-hidden="true">
+
+    <p id="darkMessage">Why did you leave me?</p>
+
+</div>
+
+<!-- HOME HORROR SCREEN -->
+
+<div id="homeScreen" class="home-screen"
+     role="dialog"
+     aria-modal="true"
+     aria-label="Home screen"
+     aria-hidden="true">
+
+    <img
+        id="homeImage"
+        src="ImagesMain/JobApplication.png"
+        alt="Dark figure"
+    >
+
+</div>
+
+
+<!-- DENNIS SECRET EVENT -->
+
+<div
+    id="dennisScreen"
+    class="dennis-screen"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Secret event"
+    aria-hidden="true"
+>
+    <div class="dennis-background"></div>
+
+    <h1 id="dennisNumber">10</h1>
+</div>
+
+<!-- DENNIS SOUND -->
+
+<audio id="dennisSound" preload="auto">
+    <source
+        src="AudioMain/DennisSound.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+</body>
 </html>

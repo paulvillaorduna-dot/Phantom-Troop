@@ -1,1 +1,707 @@
 
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* MAIN WEBSITE CONTAINER */
+
+.website {
+    position: relative;
+    width: 820px;
+    min-height: 810px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+
+.background {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("ImagesMain/EyeDark.gif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    filter: grayscale(100%) contrast(170%) brightness(55%);
+
+    z-index: 0;
+}
+
+/* HEADER */
+
+.header {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+.header h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    line-height: 1.2;
+
+    color: #cee1f5;
+
+    -webkit-text-stroke: 1px #dad9ee;
+
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        3px 3px 2px #000;
+}
+
+/* LEFT NAVIGATION */
+
+/* LEFT NAVIGATION */
+
+.navigation {
+    position: absolute;
+    top: 225px;
+    left: 8px;
+    width: 225px;
+    z-index: 10;
+}
+
+.navigation a {
+    display: block;
+    width: 100%;
+    height: 16px;
+
+    padding: 0 10px;
+    margin-bottom: 4px;
+
+    background: linear-gradient(
+        to bottom,
+        #5a0b0b 0%,
+        #440303 0%,
+        transparent 50%,
+        transparent 100%
+    );
+
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* REPEATED NAVIGATION */
+
+.repeated-links {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.repeated-links a {
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+/* INDIVIDUAL LETTERS */
+
+.glitch-letter {
+    display: inline-block;
+    position: relative;
+
+    color: inherit;
+
+    transition: none;
+    will-change: auto;
+}
+
+/* ACTIVE GLITCH */
+
+.glitch-letter.glitch-active {
+    position: relative;
+    z-index: 2;
+
+    filter: brightness(1.5);
+}
+
+/* OPTIONAL HOVER */
+
+.navigation a:hover {
+    color: #ff2222;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .glitch-letter {
+        transform: none !important;
+        text-shadow: none !important;
+    }
+}
+
+
+
+/* ARTWORK AREA */
+
+.artwork {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.photo {
+    position: absolute;
+    display: block;
+
+    object-fit: cover;
+
+    filter: contrast(145%) brightness(80%);
+
+    box-shadow: 0 0 16px rgba(0,0,0,0.7);
+}
+
+/* UPPER IMAGE */
+
+.photo-one {
+    width: 350px;
+    height: 240px;
+
+    top: 95px;
+    left: 165px;
+
+    transform: rotate(-9deg);
+
+    z-index: 3;
+}
+
+/* MIDDLE IMAGE */
+
+.photo-two {
+    width: 500px;
+    height: 215px;
+
+    top: 320px;
+    left: 230px;
+
+    transform: rotate(2deg);
+
+    z-index: 2;
+}
+
+/* LOWER IMAGE */
+
+.photo-three {
+    width: 370px;
+    height: 270px;
+
+    top: 510px;
+    left: 210px;
+
+    transform: rotate(7deg);
+
+    z-index: 1;
+}
+
+/* CONTACT FORM */
+
+.contact {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 280px;
+
+    z-index: 20;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+
+    background: rgba(47, 1, 1, 0.88);
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    padding: 3px 7px;
+
+    outline: none;
+}
+
+.contact input {
+    height: 20px;
+}
+
+.contact textarea {
+    height: 72px;
+    resize: none;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    background: #010101;
+}
+
+/* SEND BUTTON */
+
+.contact button {
+    align-self: flex-end;
+
+    background: #1e0202;
+    color: #fff;
+
+    border: none;
+
+    padding: 3px 6px;
+
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #411717;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 820px) {
+    .website {
+        width: 100%;
+        min-height: 900px;
+    }
+
+    .header h1 {
+        font-size: clamp(26px, 6vw, 54px);
+    }
+
+    .navigation {
+        left: 10px;
+        top: 160px;
+        width: 200px;
+    }
+
+    .photo-one {
+        left: 22%;
+        width: 65%;
+    }
+
+    .photo-two {
+        left: 18%;
+        width: 78%;
+    }
+
+    .photo-three {
+        left: 20%;
+        width: 65%;
+    }
+
+    .signature {
+        right: 10px;
+        top: 290px;
+        font-size: 28px;
+    }
+
+    .contact {
+        width: min(280px, 65%);
+    }
+}
+
+
+/* WORD CORRUPTION */
+
+.glitch-word {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* SCRAMBLED CHARACTERS */
+
+.corrupted-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    color: #260303;
+
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 12px;
+    white-space: nowrap;
+
+    text-shadow:
+        1px 0 #3a0202,
+        -1px 0 #440000;
+
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* ACTIVE CORRUPTION */
+
+.word-corrupted {
+    color: #370303;
+}
+
+/* GLITCH LETTER */
+
+.glitch-letter {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    transition: none;
+}
+
+.glitch-letter.glitch-active {
+    z-index: 2;
+    filter: brightness(1.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .corrupted-text {
+        display: none;
+    }
+}
+
+html,
+body,
+* {
+    cursor: url("ImagesMain/HorrorCursor.png") 0 0, auto !important;
+}
+
+
+/* DO NOT OPEN SCREEN */
+
+.dark-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #000;
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 3s ease-in-out,
+        visibility 0s linear 3s;
+}
+
+/* FADE TO BLACK */
+
+.dark-screen.active {
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 3s ease-in-out,
+        visibility 0s;
+}
+
+/* WHITE MESSAGE */
+
+#darkMessage {
+    color: #fff;
+
+    font-family: "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    opacity: 0;
+    filter: blur(6px);
+
+    transition:
+        opacity 5s ease-in-out,
+        filter 5s ease-in-out;
+}
+
+/* MESSAGE APPEARS */
+
+.dark-screen.show-message #darkMessage {
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    #darkMessage {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dark-screen,
+    #darkMessage {
+        transition-duration: 0.01ms;
+    }
+}
+
+
+
+/* HOME HORROR SCREEN */
+
+.home-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #000;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* ACTIVE SCREEN */
+
+.home-screen.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* WHITE FLASH */
+
+.home-screen.white-flash {
+    background: #fff;
+}
+
+/* HORROR IMAGE */
+
+#homeImage {
+    display: block;
+
+    max-width: 80vw;
+    max-height: 80vh;
+
+    width: auto;
+    height: auto;
+    object-fit: contain;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* SHOW HORROR IMAGE */
+
+.home-screen.show-image #homeImage {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==========================================
+   DENNIS SECRET SCREEN
+========================================== */
+
+.dennis-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #000;
+
+    z-index: 20000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    overflow: hidden;
+}
+
+/* ACTIVATE SECRET SCREEN */
+
+.dennis-screen.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* DENNIS BACKGROUND */
+
+.dennis-background {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("ImagesMain/DennisHorror.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    filter: grayscale(100%) contrast(180%) brightness(35%);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: none;
+    pointer-events: none;
+}
+
+/* SHOW ONLY WHEN MOUSE MOVES */
+
+.dennis-screen.active.mouse-moving .dennis-background {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* DARK OVERLAY */
+
+.dennis-background::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   DENNIS NUMBER 10
+========================================== */
+
+#dennisNumber {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Creepster", cursive;
+    font-size: clamp(120px, 28vw, 350px);
+    font-weight: 400;
+
+    color: #1d0707;
+
+    text-align: center;
+    line-height: 1;
+
+    opacity: 0;
+    visibility: hidden;
+
+    text-shadow:
+        3px 3px 0 #0b0202,
+        -3px -3px 0 #110808,
+        0 0 20px #1f0c0c,
+        0 0 60px #0a0808;
+
+    /* No animations */
+    transition: none;
+    animation: none;
+    transform: none;
+    filter: none;
+}
+
+/* NUMBER APPEARS INSTANTLY */
+
+.dennis-screen.show-number #dennisNumber {
+    opacity: 1;
+    visibility: visible;
+
+    transition: none;
+    animation: none;
+    transform: none;
+    filter: none;
+}
+
+/* BACKGROUND IMAGE */
+
+.dennis-background {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("ImagesMain/DennisHorror.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    filter:
+        grayscale(100%)
+        contrast(180%)
+        brightness(35%);
+
+    opacity: 1;
+    transition: none;
+}
+
+/* SECRET SCREEN */
+
+.dennis-screen {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #000;
+    z-index: 20000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    overflow: hidden;
+
+    transition: none;
+}
+
+.dennis-screen.active {
+    visibility: visible;
+    opacity: 1;
+}
